@@ -1,39 +1,28 @@
 import React, { useState } from "react";
 import Login from "../../../components/user/LoginSignup/Login";
 import Signup from "../../../components/user/LoginSignup/Signup";
-import "./LoginSignup.css";
+// import "../../../components/user/LoginSignup/login.css";
+import "../../../components/user/LoginSignup/signupNLogin.css";
+
 
 function LoginSignup() {
   const [isLogin, setLogin] = useState(false);
+  
   return (
-    <div className="LoginSignupWrapper">
-      <h1>{isLogin?"Login":"Sign Up"}</h1>
-      <div className="loginSignupInnerWrapper">
-        <div className="loginSignupNavigation">
-          <span
-            onClick={() => setLogin(true)}
-            style={{
-              boxShadow: `${
-                isLogin ? "0 0px 1px 1px rgb(5, 197, 130,0.5)" : ""
-              }`,
-            }}
-          >
-            Login
-          </span>
-          <span
-            onClick={() => setLogin(false)}
-            style={{
-              boxShadow: `${
-                !isLogin ? "0 0px 1px 1px rgb(5, 197, 130,0.5)" : ""
-              }`,
-            }}
-          >
-            Sign Up
-          </span>
-        </div>
-        <div>{isLogin ? <Login /> : <Signup />}</div>
-      </div>
+    <div class="form">
+    
+     
+        <div class="button-box">
+         
+          <button type="button"  className={isLogin?"btn active":"btn"} onClick={()=>{setLogin(true)}}>login </button>
+          <button type="button" className={isLogin?"btn":"btn active"} onClick={()=>{setLogin(false)}}>Signup</button>
+        </div>{
+ isLogin?<Login/>:<Signup/>
+        }
+      
+       
     </div>
+
   );
 }
 
