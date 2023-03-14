@@ -1,6 +1,7 @@
 import React from 'react'
 import LoginSignup from './pages/user/LoginSignup/LoginSignup';
 import Navbar from './components/Navbar/Navbar'
+import { UserSpace } from './pages/user/Dashboard/userSpace';
 import './App.css'
 
 function App() {
@@ -8,8 +9,7 @@ function App() {
   return (
     <>
       <div className="App">
-      {/* <Navbar/> */}
-      <LoginSignup />
+      <UserSpace/>
       </div>  
     </>
   )

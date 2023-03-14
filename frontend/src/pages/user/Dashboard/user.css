@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.space{
+    display: flex;
+}
+.sideMenu{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color:white;
+    height:100vh;
+    padding:2vw 1vw;
+    gap:30px;
+    align-items:flex-start ;
+    position: relative;
+}
+.TodoList{
+    display: flex;
+}
+.dashboard{
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+    background-color: #3661EB;
+    color: white;
+    padding: 3px 15px;
+    align-items: center;
+    justify-content: center;
+}
+.createTask{
+    display: flex;
+    gap:20px;
+}
+.store{
+    display: flex;
+    gap:20px;
+}
+.profileMenuOpt{
+    display: flex;
+    gap:20px;
+}
+.logout{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    gap:20px;
+    
+}
+.content{background-color:  #323435;
+    width: 94vw;
+padding:30px 30px}

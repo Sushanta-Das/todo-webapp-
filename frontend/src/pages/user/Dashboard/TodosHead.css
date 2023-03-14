@@ -1,0 +1,49 @@
+.heading1{
+    font-size: 20px;
+}
+.heading2{
+    font-size: 15px;
+}
+.heading{
+    margin: 12px 26px;
+    color:white;
+}
+.count{
+    width: 24px;
+height: 16px;
+background: rgba(255, 255, 255, 0.55);
+border-radius: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+color:white;
+margin-left:5px;
+}
+.count1 {
+    background: #3661EB;
+    
+}
+.status div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.status{
+    display: flex;
+    gap: 30px;
+    color:rgba(255, 255, 255, 0.55);
+}
+.todoStatus{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 28px;
+}
+.todoCount{
+    color:white;
+}
+.vBar{
+    height:26px;
+    width:3px;
+    background-color: rgba(0, 0, 0, 0.555);
+    
+}
