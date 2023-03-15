@@ -9,6 +9,7 @@ import {Todoshead} from "./todosHead"
 import { Header } from './Header'
 import { Todos } from './todos'
 import "./user.css"
+import {  TodosPage} from "./TodosPage";
 export const UserSpace = () => {
     return (
         <><div className="space"><div className="sideMenu"><div className="TodoList"><div className="icon"></div><h2>Todo List</h2></div>
@@ -22,7 +23,7 @@ export const UserSpace = () => {
 
         </div><div className="content"><Header/>
         <Todoshead/>
-        <Todos/>
+        <TodosPage/>
 
         </div></div></>
     )

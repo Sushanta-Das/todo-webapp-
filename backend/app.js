@@ -11,7 +11,7 @@ const app = express()
 // Load env vars
 dotenv.config({ path: './env/.env' })
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT ||1337
 
 // DB Connection
 connectDB()

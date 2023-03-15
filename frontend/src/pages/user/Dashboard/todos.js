@@ -1,87 +1,23 @@
 import React from 'react'
+import { TodoItem } from './todoItem'
 import"./todos.css"
 import deleteImg from"./../../../userSpace_icons/delete.png"
 import editImg from"./../../../userSpace_icons/edit.png"
-export const Todos = () => {
+export const Todos = (props) => {
+    console.log("Length",props.todo)
   return (
     <>
-    <div className="todoItem">
-        <div className="head">
-        <input  className="chkBox" type="checkbox" name="" id=""/>
-            <div className="date">Fri<br />08</div>
-            <div className="time">12:00<br />
-                PM</div>
-                <div className="hBar"></div>
-                <div className="todoRow">
-                <div className="todo">
-                <div className="title">Web Design<div id="category">Team</div></div>
-                <div className="desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum . </div>
-                
-            </div>
-            <div className="todoRight"><div className="deadline">Deadline in 21 Hrs</div>
-            <div className="op">
-            <div className="edit"><img src={editImg} alt="edit" /></div>
-                <div className="delete"><img src={deleteImg} alt="delete" /></div>
-
-            </div>
-                </div></div>
-            
-            
-        </div>
-        
+    <div className='container'>
+     
+    {
+     props.todo.length===0 || props.todo===undefined ?<h4>Todos list is Empty</h4> :  props.todo.map((item) =>{
+        return <TodoItem todo={item}  key={item.sl} update={props.update}  ondelete={props.ondelete }/>
+        })
+    }
+    
+   
     </div>
-    <div className="todoItem">
-        <div className="head">
-            <div className="date">Fri<br />08</div>
-            <div className="time">12:00<br />
-                PM</div>
-                <div className="hBar"></div>
-            <div className="todo">
-                <div className="title">Web Design<div id="category">Team</div></div>
-                <div className="desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum . </div>
-                
-            </div>
-        </div>
-        <div className="subtask"><input  className="chkBox" type="checkbox" name="" id=""/>
-            <div className="todo">
-                <div className="title">Web Design</div>
-                <div className="desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum . </div>
-
-            </div>
-            <div className="deadline">Deadline in 21 Hrs</div>
-            <div className="op">
-            <div className="edit"><img src={editImg} alt="edit" /></div>
-                <div className="delete"><img src={deleteImg} alt="delete" /></div>
-
-            </div>
-        </div>
-
-        <div className="subtask"><input  className="chkBox" type="checkbox" name="" id=""/>
-            <div className="todo">
-                <div className="title">Web Design</div>
-                <div className="desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum . </div>
-
-            </div>
-            <div className="deadline">Deadline in 21 Hrs</div>
-            <div className="op">
-                <div className="edit"><img src={editImg} alt="edit" /></div>
-                <div className="delete"><img src={deleteImg} alt="delete" /></div>
-            </div>
-        </div>
-
-        <div className="subtask"><input  className="chkBox" type="checkbox" name="" id=""/>
-            <div className="todo">
-                <div className="title">Web Design</div>
-                <div className="desc">is simply dummy text of the printing and typesetting industry. Lorem Ipsum . </div>
-
-            </div>
-            <div className="deadline">Deadline in 21 Hrs</div>
-            <div className="op">
-            <div className="edit"><img src={editImg} alt="edit" /></div>
-                <div className="delete"><img src={deleteImg} alt="delete" /></div>
-            </div>
-        </div>
-    </div>
+   
     </>
   )
 }
